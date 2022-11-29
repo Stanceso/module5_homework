@@ -1,9 +1,11 @@
 let arr = [1, 2, 0, 4, 5, 0, null, "+"]
 let result = arr.filter(function(num) {
+  if (num === 0)
+    return false;
     if (num !=null && num % 2 === 0) {
         return true;
     } else {
-//       if (num != null)
+ (num != null)
         return false;
     }
 });
@@ -31,16 +33,3 @@ let result2 = arr.filter(function(num) {
 });
 console.log('Количество нулей: ', result2.length)
 console.log(result2)
-
-
-
-let result3 = arr.filter(function(num) {
-    if (typeof(num) === "string")
-    {
-        return  true;
-    } else {
-        return false;
-    }
-});
-console.log(' Количество знаков: ', result3.length)
-console.log(result3)
